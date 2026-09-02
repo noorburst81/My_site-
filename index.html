@@ -6,31 +6,32 @@
 <title>MediGuide - Your Health Partner</title>
 <style>
 body{font-family:Arial,sans-serif;margin:0;background:#dcedc8;color:#333;text-align:center}
-header{padding:20px 20px 10px}
-.logo-box{width:125px;height:125px;background:linear-gradient(180deg, #8e0000 0%, #5d0000 100%);margin:0 auto 8px;border-radius:24px;display:flex;align-items:center;justify-content:center;position:relative;box-shadow:0 5px 15px rgba(0,0,0,0.3)}
+header{padding:18px 20px 8px}
+.logo-box{width:130px;height:130px;background:linear-gradient(180deg, #8e0000 0%, #5d0000 100%);margin:0 auto 6px;border-radius:26px;display:flex;align-items:center;justify-content:center;position:relative;box-shadow:0 6px 18px rgba(0,0,0,0.3)}
 
-/* LOGO FROM PHOTO 2 + PULSE */
-.heart-logo{width:90px;height:90px;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.3))}
-.heart-outline{fill:none;stroke:url(#heartMetal);stroke-width:5;stroke-linecap:round}
-.hands{fill:url(#handMetal)}
-.person{fill:url(#handMetal)}
+.heart-logo{width:95px;height:95px;filter:drop-shadow(0 3px 6px rgba(0,0,0,0.35))}
+.heart-top{fill:none;stroke:url(#heartTop);stroke-width:9;stroke-linecap:round} /* 2X THICKER */
+.hand-left{fill:none;stroke:url(#handGrad);stroke-width:4.5;stroke-linecap:round} /* THINNER */
+.hand-right{fill:none;stroke:url(#handGrad);stroke-width:4.5;stroke-linecap:round} /* THINNER */
+.finger{fill:none;stroke:url(#handGrad);stroke-width:2.8;stroke-linecap:round}
+.person{fill:url(#personGrad)}
 .pulse-path{fill:none;stroke:white;stroke-width:3.5;stroke-linejoin:round;stroke-linecap:round}
-.leaf{fill:#66bb6a}
+.leaf{fill:#43a047}
 
-.brand-name{font-size:26px;color:#ff8c42;font-weight:bold;margin:3px 0}
-.tagline{font-size:13px;color:#555;margin:0}
-.lang-btns{margin:12px 0 5px}
-.lang-btns button{background:white;color:#2e7d32;border:1px solid #2e7d32;padding:6px 14px;border-radius:20px;font-weight:normal;font-size:13px;margin:0 5px;cursor:pointer}
-.container{max-width:800px;margin:10px auto;padding:0 15px;text-align:left}
-.about{padding:5px 0 10px;margin-bottom:5px;text-align:center}
-.about h2{color:#b71c1c;font-size:20px;margin:5px 0;font-weight:bold}
+.brand-name{font-size:24px;color:#ff8c42;font-weight:bold;margin:2px 0;letter-spacing:-0.5px;transform:scaleX(0.9)}
+.tagline{font-size:12px;color:#555;margin:0}
+.lang-btns{margin:10px 0 4px}
+.lang-btns button{background:white;color:#2e7d32;border:1.5px solid #2e7d32;padding:7px 16px;border-radius:22px;font-weight:600;font-size:14px;margin:0 6px;cursor:pointer}
+.container{max-width:800px;margin:8px auto;padding:0 15px;text-align:left}
+.about{padding:4px 0 8px;margin-bottom:4px;text-align:center}
+.about h2{color:#b71c1c;font-size:20px;margin:4px 0;font-weight:bold}
 .about h2 span{color:#ff8c42}
-.about p{font-size:14px;line-height:1.5;margin:5px 0}
-.product{background:white;padding:12px 15px;margin:12px 0;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.08);border:1px solid #c8e6c9;text-align:left}
+.about p{font-size:14px;line-height:1.5;margin:4px 0}
+.product{background:white;padding:12px 15px;margin:10px 0;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.08);border:1px solid #c8e6c9;text-align:left}
 .product h3{color:#b71c1c;margin:3px 0;font-size:17px}
 .product p{margin:5px 0 8px;font-size:14px}
 .btn{background:#b2ebf2;color:#004d40;padding:8px 16px;border:none;border-radius:7px;text-decoration:none;display:inline-block;font-weight:bold;font-size:13px}
-.ad-space{border:2px dashed #81d4fa;background:#e1f5fe;padding:15px;text-align:center;margin:15px 0;color:#01579b;border-radius:10px;font-weight:bold;font-size:13px}
+.ad-space{border:2px dashed #81d4fa;background:#e1f5fe;padding:15px;text-align:center;margin:14px 0;color:#01579b;border-radius:10px;font-weight:bold;font-size:13px}
 footer{text-align:center;padding:15px;font-size:11px;color:#666}
 </style>
 </head>
@@ -40,33 +41,44 @@ footer{text-align:center;padding:15px;font-size:11px;color:#666}
 <div class="logo-box">
 <svg class="heart-logo" viewBox="0 0 100 100">
 <defs>
-<!-- ROSE GOLD HEART OUTLINE -->
-<linearGradient id="heartMetal" x1="0%" y1="0%" x2="0%" y2="100%">
-<stop offset="0%" style="stop-color:#f8bbd0;stop-opacity:1" />
-<stop offset="100%" style="stop-color:#c2185b;stop-opacity:1" />
+<linearGradient id="heartTop" x1="0%" y1="0%" x2="0%" y2="100%">
+<stop offset="0%" style="stop-color:#f48fb1;stop-opacity:1" />
+<stop offset="100%" style="stop-color:#d81b60;stop-opacity:1" />
 </linearGradient>
-<!-- BLUE HANDS -->
-<linearGradient id="handMetal" x1="0%" y1="0%" x2="0%" y2="100%">
-<stop offset="0%" style="stop-color:#4fc3f7;stop-opacity:1" />
-<stop offset="100%" style="stop-color:#0277bd;stop-opacity:1" />
+<linearGradient id="handGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+<stop offset="0%" style="stop-color:#64b5f6;stop-opacity:1" />
+<stop offset="100%" style="stop-color:#1976d2;stop-opacity:1" />
+</linearGradient>
+<linearGradient id="personGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+<stop offset="0%" style="stop-color:#81d4fa;stop-opacity:1" />
+<stop offset="100%" style="stop-color:#0288d1;stop-opacity:1" />
 </linearGradient>
 </defs>
 
-<!-- 2 HANDS HOLDING PERSON -->
-<path class="hands" d="M25 55 C18 50, 15 40, 22 35 C28 32, 32 38, 30 45 L35 50 L32 65 C30 70, 25 68, 25 55 Z"/>
-<path class="hands" d="M75 55 C82 50, 85 40, 78 35 C72 32, 68 38, 70 45 L65 50 L68 65 C70 70, 75 68, 75 55 Z"/>
-<!-- PERSON -->
-<circle class="person" cx="50" cy="40" r="6"/>
-<path class="person" d="M50 46 L50 60 M42 52 L58 52"/>
+<!-- THICK PINK TOP OF HEART -->
+<path class="heart-top" d="M20 38 C10 22, 30 10, 50 22 C70 10, 90 22, 80 38"/>
 
-<!-- HEART OUTLINE -->
-<path class="heart-outline" d="M50 15 C35 5, 10 25, 20 45 C25 55, 50 75, 50 75 C50 75, 75 55, 80 45 C90 25, 65 5, 50 15 Z"/>
+<!-- THIN HANDS IN DUA POSITION - MEET AT BOTTOM -->
+<!-- LEFT HAND -->
+<path class="hand-left" d="M20 38 C18 48, 30 62, 50 72"/> <!-- palm to center -->
+<path class="finger" d="M30 62 L28 68 M33 62 L31 68 M36 62 L34 68 M39 62 L37 68"/> <!-- 4 fingers -->
+<path class="finger" d="M30 62 L26 60"/> <!-- thumb out -->
 
-<!-- ECG PULSE W ON TOP -->
-<path class="pulse-path" d="M15 35 L25 35 L35 15 L45 55 L55 15 L65 55 L75 35 L85 35"/>
+<!-- RIGHT HAND -->
+<path class="hand-right" d="M80 38 C82 48, 70 62, 50 72"/> <!-- palm to center -->
+<path class="finger" d="M70 62 L72 68 M67 62 L69 68 M64 62 L66 68 M61 62 L63 68"/> <!-- 4 fingers -->
+<path class="finger" d="M70 62 L74 60"/> <!-- thumb out -->
+
+<!-- PERSON IN MIDDLE -->
+<circle class="person" cx="50" cy="45" r="5"/>
+<path class="person" d="M50 50 L50 60 M44 55 L56 55" stroke="url(#personGrad)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+
+<!-- ECG PULSE SEPARATOR -->
+<path class="pulse-path" d="M12 33 L24 33 L34 15 L44 48 L54 15 L64 48 L74 33 L86 33"/>
 
 <!-- 2 LEAVES -->
-<path class="leaf" d="M48 8 C46 5, 43 4, 42 7 C41 10, 44 11, 45 10 C45 10, 45 7, 48 6 C51 7, 51 10, 50 10 C51 11, 54 10, 53 7 C52 4, 49 5, 48 8 Z"/>
+<ellipse class="leaf" cx="46" cy="9" rx="3" ry="4.5" transform="rotate(-20 46 9)"/>
+<ellipse class="leaf" cx="54" cy="9" rx="3" ry="4.5" transform="rotate(20 54 9)"/>
 </svg>
 </div>
 <div class="brand-name">MediGuide</div>
