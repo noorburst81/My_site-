@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,23 +6,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MediGuide - Your Health Partner</title>
 <style>
-body{font-family:Arial,sans-serif;margin:0;background:#f1f8e9;color:#333} /* PALE GREEN */
-header{background:#f1f8e9;color:#333;text-align:center;padding:30px 20px;position:relative}
-.lang-btns{position:absolute;top:15px;right:15px}
-.lang-btns button{background:#e0f2f1;color:#00695c;border:1px solid #b2dfdb;padding:6px 10px;border-radius:15px;font-weight:bold;margin-left:5px;font-size:12px}
-.logo-box{width:100px;height:100px;background:#800000;margin:0 auto 10px;border-radius:10px;display:flex;align-items:center;justify-content:center;position:relative}
-.heart{font-size:50px;color:#800000;position:relative}
-.leaf{position:absolute;font-size:18px;color:#2e7d32}
-.leaf1{top:15px;left:25px}
-.leaf2{top:15px;right:25px}
-.brand-name{font-size:26px;color:#ff7700;font-weight:bold;margin:5px 0}
-.tagline{font-size:14px;color:#555}
+body{font-family:Arial,sans-serif;margin:0;background:#e8f5e9;color:#333}
+header{background:linear-gradient(to bottom, #e8f5e9, #c8e6c9);color:#333;text-align:center;padding:20px 20px 30px;position:relative}
+.lang-btns{position:absolute;top:25px;right:25px;z-index:10}
+.lang-btns button{background:white;color:#2e7d32;border:2px solid #2e7d32;padding:12px 18px;border-radius:25px;font-weight:bold;margin-left:10px;font-size:15px;cursor:pointer;box-shadow:0 2px 5px rgba(0,0,0,0.1)}
+.logo-box{width:120px;height:120px;background:linear-gradient(180deg, #a00000 0%, #600000 100%);margin:0 auto 8px;border-radius:15px;display:flex;align-items:center;justify-content:center;position:relative;box-shadow:0 4px 10px rgba(0,0,0,0.2)}
+.heart{font-size:60px;color:#ff3366;position:relative}
+.pulse-line{position:absolute;width:80%;height:4px;background:white;top:50%;left:10%;border-radius:2px}
+.leaf{position:absolute;font-size:22px;color:#2e7d32}
+.leaf1{top:18px;left:22px}
+.leaf2{top:18px;right:22px}
+.brand-name{font-size:32px;color:#ff7700;font-weight:bold;margin:2px 0 5px 0}
+.tagline{font-size:15px;color:#444;margin:0}
 .container{max-width:900px;margin:20px auto;padding:0 15px}
-.about{background:white;padding:20px;border-radius:10px;margin-bottom:20px;text-align:center;border:1px solid #c8e6c9}
-.product{background:white;padding:15px;margin:15px 0;border-radius:10px;box-shadow:0 2px 5px rgba(0,0,0,0.05);border:1px solid #c8e6c9}
+.about{background:white;padding:25px;border-radius:12px;margin-bottom:20px;text-align:center;border:1px solid #a5d6a7}
+.product{background:white;padding:18px;margin:15px 0;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);border:1px solid #a5d6a7}
 .product h3{color:#800000;margin:5px 0}
-.btn{background:#b2ebf2;color:#004d40;padding:10px 18px;border:none;border-radius:8px;text-decoration:none;display:inline-block;font-weight:bold}
-.ad-space{border:2px dashed #b2ebf2;background:#e0f7fa;padding:20px;text-align:center;margin:20px 0;color:#004d40;border-radius:10px}
+.btn{background:#b2ebf2;color:#004d40;padding:12px 20px;border:none;border-radius:8px;text-decoration:none;display:inline-block;font-weight:bold;font-size:15px}
+.ad-space{border:2px dashed #b2ebf2;background:#e0f7fa;padding:25px;text-align:center;margin:25px 0;color:#004d40;border-radius:12px;font-weight:bold}
 footer{text-align:center;padding:20px;font-size:12px;color:#666}
 </style>
 </head>
@@ -39,6 +41,7 @@ footer{text-align:center;padding:20px;font-size:12px;color:#666}
 <span class="leaf leaf1">🍃</span>
 <span class="leaf leaf2">🍃</span>
 <div class="heart">❤️</div>
+<div class="pulse-line"></div>
 </div>
 </div>
 <div class="brand-name">MediGuide</div>
@@ -54,23 +57,40 @@ Your health is our priority. Always consult a doctor before starting any supplem
 </div>
 
 <div class="ad-space">
-<b>AD SPACE</b><br>Paste Google AdSense code here
+AD SPACE<br>Paste Google AdSense code here
 </div>
 
 <h2 style="text-align:center;color:#800000">Top 4 Health Products</h2>
 
 <div class="product">
 <h3>Omega 3 EPA + DHA</h3>
-<p>Supports heart, brain & joint health. Key ingredients: Fish Oil, EPA, DHA.</p>
+<p>Supports heart, brain & joint health.</p>
+<a href="#" class="btn">Buy on Amazon</a>
+</div>
+
+<div class="product">
+<h3>Whey Protein Isolate</h3>
+<p>Supports muscle growth & recovery. 25g protein per serving. Fast absorption.</p>
 <a href="#" class="btn">Buy on Amazon</a>
 </div>
 
 <div class="product">
 <h3>Natural Testosterone Support</h3>
-<p>Supports energy, stamina & vitality. Key herbal ingredients: Tribulus, Ashwagandha, Shilajit, Tongkat Ali, Maca.</p>
+<p>Supports energy, stamina & vitality. Contains a proprietary herbal blend.</p>
 <a href="#" class="btn">Buy on Amazon</a>
 </div>
 
 <div class="product">
 <h3>Calcium + Vitamin D3</h3>
-<p>Supports strong bones & teeth
+<p>Supports strong bones & teeth.</p>
+<a href="#" class="btn">Buy on Amazon</a>
+</div>
+
+</div>
+
+<footer>
+*These statements have not been evaluated by FDA. Not intended to diagnose, treat, cure or prevent any disease.
+</footer>
+
+</body>
+</html>
