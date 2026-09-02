@@ -5,54 +5,84 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MediGuide - Your Health Partner</title>
 <style>
-body{font-family:Arial,sans-serif;margin:0;background:#dcedc8;color:#333;text-align:center} /* MORE PRONOUNCED PALE GREEN */
-header{padding:50px 20px 20px}
-.lang-btns{margin-bottom:15px}
-.lang-btns button{background:white;color:#2e7d32;border:1px solid #2e7d32;padding:6px 12px;border-radius:20px;font-weight:normal;font-size:12px;margin:0 4px;cursor:pointer}
-.logo-box{width:115px;height:115px;background:linear-gradient(180deg, #b71c1c 0%, #7f0000 100%);margin:0 auto 10px;border-radius:20px;display:flex;align-items:center;justify-content:center;position:relative;box-shadow:0 5px 15px rgba(0,0,0,0.25)} /* 3D SHADOW + GRADIENT */
-.heart{font-size:58px;color:#ff4d6d;position:relative;z-index:2}
-.pulse-line{position:absolute;width:120%;height:4px;background:white;top:50%;left:-10%;border-radius:2px;box-shadow:0 0 5px rgba(255,255,255,0.8);z-index:1} /* GOES OUTSIDE HEART */
-.leaf{position:absolute;font-size:22px;color:#388e3c} /* BRIGHT GREEN */
-.leaf1{top:14px;left:18px}
-.leaf2{top:14px;right:18px}
-.brand-name{font-size:30px;color:#ff7700;font-weight:bold;margin:5px 0}
-.tagline{font-size:14px;color:#444;margin:0}
-.container{max-width:850px;margin:15px auto;padding:0 15px;text-align:left}
-.about{padding:10px 0 20px;margin-bottom:10px;text-align:center} /* NO BOX, NORMAL FONT */
-.about h2{color:#800000;font-size:24px;margin-bottom:8px;font-weight:normal}
-.about p{font-size:15px;line-height:1.6}
-.product{background:white;padding:18px;margin:15px auto;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);border:1px solid #a5d6a7;text-align:left;width:78%} /* 78% WIDTH */
-.product h3{color:#800000;margin:5px 0;font-size:18px}
-.btn{background:#b2ebf2;color:#004d40;padding:10px 18px;border:none;border-radius:8px;text-decoration:none;display:inline-block;font-weight:bold;font-size:14px;margin-top:8px}
-.ad-space{border:2px dashed #b2ebf2;background:#e0f7fa;padding:20px;text-align:center;margin:20px auto;color:#004d40;border-radius:12px;font-weight:bold;font-size:14px;width:78%} /* 78% WIDTH */
-footer{text-align:center;padding:20px;font-size:12px;color:#666}
+body{font-family:Arial,sans-serif;margin:0;background:#dcedc8;color:#333;text-align:center}
+header{padding:20px 20px 10px}
+.logo-box{width:125px;height:125px;background:linear-gradient(180deg, #8e0000 0%, #5d0000 100%);margin:0 auto 8px;border-radius:24px;display:flex;align-items:center;justify-content:center;position:relative;box-shadow:0 5px 15px rgba(0,0,0,0.3)}
+
+/* LOGO FROM PHOTO 2 + PULSE */
+.heart-logo{width:90px;height:90px;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.3))}
+.heart-outline{fill:none;stroke:url(#heartMetal);stroke-width:5;stroke-linecap:round}
+.hands{fill:url(#handMetal)}
+.person{fill:url(#handMetal)}
+.pulse-path{fill:none;stroke:white;stroke-width:3.5;stroke-linejoin:round;stroke-linecap:round}
+.leaf{fill:#66bb6a}
+
+.brand-name{font-size:26px;color:#ff8c42;font-weight:bold;margin:3px 0}
+.tagline{font-size:13px;color:#555;margin:0}
+.lang-btns{margin:12px 0 5px}
+.lang-btns button{background:white;color:#2e7d32;border:1px solid #2e7d32;padding:6px 14px;border-radius:20px;font-weight:normal;font-size:13px;margin:0 5px;cursor:pointer}
+.container{max-width:800px;margin:10px auto;padding:0 15px;text-align:left}
+.about{padding:5px 0 10px;margin-bottom:5px;text-align:center}
+.about h2{color:#b71c1c;font-size:20px;margin:5px 0;font-weight:bold}
+.about h2 span{color:#ff8c42}
+.about p{font-size:14px;line-height:1.5;margin:5px 0}
+.product{background:white;padding:12px 15px;margin:12px 0;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.08);border:1px solid #c8e6c9;text-align:left}
+.product h3{color:#b71c1c;margin:3px 0;font-size:17px}
+.product p{margin:5px 0 8px;font-size:14px}
+.btn{background:#b2ebf2;color:#004d40;padding:8px 16px;border:none;border-radius:7px;text-decoration:none;display:inline-block;font-weight:bold;font-size:13px}
+.ad-space{border:2px dashed #81d4fa;background:#e1f5fe;padding:15px;text-align:center;margin:15px 0;color:#01579b;border-radius:10px;font-weight:bold;font-size:13px}
+footer{text-align:center;padding:15px;font-size:11px;color:#666}
 </style>
 </head>
 <body>
 
 <header>
+<div class="logo-box">
+<svg class="heart-logo" viewBox="0 0 100 100">
+<defs>
+<!-- ROSE GOLD HEART OUTLINE -->
+<linearGradient id="heartMetal" x1="0%" y1="0%" x2="0%" y2="100%">
+<stop offset="0%" style="stop-color:#f8bbd0;stop-opacity:1" />
+<stop offset="100%" style="stop-color:#c2185b;stop-opacity:1" />
+</linearGradient>
+<!-- BLUE HANDS -->
+<linearGradient id="handMetal" x1="0%" y1="0%" x2="0%" y2="100%">
+<stop offset="0%" style="stop-color:#4fc3f7;stop-opacity:1" />
+<stop offset="100%" style="stop-color:#0277bd;stop-opacity:1" />
+</linearGradient>
+</defs>
+
+<!-- 2 HANDS HOLDING PERSON -->
+<path class="hands" d="M25 55 C18 50, 15 40, 22 35 C28 32, 32 38, 30 45 L35 50 L32 65 C30 70, 25 68, 25 55 Z"/>
+<path class="hands" d="M75 55 C82 50, 85 40, 78 35 C72 32, 68 38, 70 45 L65 50 L68 65 C70 70, 75 68, 75 55 Z"/>
+<!-- PERSON -->
+<circle class="person" cx="50" cy="40" r="6"/>
+<path class="person" d="M50 46 L50 60 M42 52 L58 52"/>
+
+<!-- HEART OUTLINE -->
+<path class="heart-outline" d="M50 15 C35 5, 10 25, 20 45 C25 55, 50 75, 50 75 C50 75, 75 55, 80 45 C90 25, 65 5, 50 15 Z"/>
+
+<!-- ECG PULSE W ON TOP -->
+<path class="pulse-path" d="M15 35 L25 35 L35 15 L45 55 L55 15 L65 55 L75 35 L85 35"/>
+
+<!-- 2 LEAVES -->
+<path class="leaf" d="M48 8 C46 5, 43 4, 42 7 C41 10, 44 11, 45 10 C45 10, 45 7, 48 6 C51 7, 51 10, 50 10 C51 11, 54 10, 53 7 C52 4, 49 5, 48 8 Z"/>
+</svg>
+</div>
+<div class="brand-name">MediGuide</div>
+<p class="tagline">Your Trusted Guide to Health Supplements</p>
+
 <div class="lang-btns">
 <button>English</button>
 <button>اردو</button>
 <button>العربية</button>
 </div>
-
-<div class="logo-box">
-<div>
-<span class="leaf leaf1">🍃</span>
-<span class="leaf leaf2">🍃</span>
-<div class="heart">❤️</div>
-<div class="pulse-line"></div>
-</div>
-</div>
-<div class="brand-name">MediGuide</div>
-<p class="tagline">Your Trusted Guide to Health Supplements</p>
 </header>
 
 <div class="container">
 
 <div class="about">
-<h2>Welcome to MediGuide</h2>
+<h2>Welcome to <span>MediGuide</span></h2>
 <p>We help you choose the best health supplements with honest reviews and direct links. 
 Your health is our priority. Always consult a doctor before starting any supplement.</p>
 </div>
@@ -69,13 +99,13 @@ AD SPACE<br>Paste Google AdSense code here
 
 <div class="product">
 <h3>Whey Protein Isolate</h3>
-<p>Supports muscle growth & recovery. 25g protein per serving. Fast absorption.</p>
+<p>Supports muscle growth & recovery. 25g protein per serving.</p>
 <a href="#" class="btn">Buy on Amazon</a>
 </div>
 
 <div class="product">
 <h3>Natural Testosterone Support</h3>
-<p>Supports energy, stamina & vitality. Contains a proprietary herbal blend.</p>
+<p>Supports energy, stamina & vitality. Herbal blend.</p>
 <a href="#" class="btn">Buy on Amazon</a>
 </div>
 
